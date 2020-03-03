@@ -1,0 +1,22 @@
+Main
+
+for ever{
+
+
+      e.step
+      e.draw
+
+      wait(n);
+}
+
+
+
+
+
+
+jeu.step{
+      deplacer projectiles
+      deplacer méchants
+      input joueurs
+      collisions
+}

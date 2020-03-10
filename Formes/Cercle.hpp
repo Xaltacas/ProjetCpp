@@ -4,12 +4,13 @@
 
 class Cercle : public Forme {
 public:
-      boolean intersect(Cercle c);
-      boolean intersect(Rectangle r);
+      bool intersect(Cercle c);
+      bool intersect(Rectangle r);
 
+      double getRayon(){return rayon};
 
 private:
-      int rayon;
+      double rayon;
 
 };
 #endif

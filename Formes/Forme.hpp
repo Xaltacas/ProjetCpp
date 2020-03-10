@@ -3,12 +3,16 @@
 
 class Forme{
 public:
-      virtual boolean intersect(Cercle c);
-      virtual boolean intersect(Rectangle r);
+      virtual bool intersect(Cercle c);
+      virtual bool intersect(Rectangle r);
+
+      double getX(){return x};
+      double getY(){return y};
+
 
 private:
-      int x;
-      int y;
+      double x;
+      double y;
 
 
 };

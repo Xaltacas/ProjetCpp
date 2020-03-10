@@ -2,13 +2,17 @@
 #define RECTANGLE_HPP
 #include "forme.hpp"
 
-class Cercle : public Forme {
+class Rectangle : public Forme {
 public:
-      boolean intersect(Cercle c);
-      boolean intersect(Rectangle r);
+      bool intersect(Cercle c);
+      bool intersect(Rectangle r);
+
+      double getLength(){return length};
+      double getHeight(){return height};
 
 private:
-      int rayon;
+      double length;
+      double height;
 
 };
 

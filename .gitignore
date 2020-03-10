@@ -1,1 +1,3 @@
 *.o
+sfml-app
+testSFML.cpp

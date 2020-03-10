@@ -7,7 +7,7 @@ public:
       virtual void ia();
 
 private:
-      Trajectoire traj;
+      //Trajectoire traj;
       int valeur;
       int vie;
 };

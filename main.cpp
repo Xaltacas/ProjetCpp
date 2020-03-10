@@ -1,8 +1,14 @@
+#include <iostream>
+
 #include "Etats/Etat.hpp"
+#include "Formes/Forme.hpp"
+#include "Joueurs/Joueur.hpp"
+#include "Mechants/Mechant.hpp"
+#include "Trajectoires/Trajectoire.hpp"
 
 int main(){
-      Etat e = Menu();
 
+      std::cout << "ca complie!! incroyable!!"<< std::endl;
 
       return 0;
 }

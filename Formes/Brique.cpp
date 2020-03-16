@@ -1,8 +1,8 @@
 #include "Brique.hpp"
 
-bool Cercle::intersect(Brique b){
+bool Brique::intersect(Brique b){
 
-	return !((b.x + b.lenght < y)||
+	return !((b.x + b.length < y)||
                (b.y + b.height < x)||
                (x + length < b.x)||
                (y + height < b.y) );

@@ -8,7 +8,7 @@ public:
       double getLength(){return length;};
       double getHeight(){return height;};
 
-      Brique(double _x, double _y, double _length, double _height,int[] _color) :
+      Brique(double _x, double _y, double _length, double _height,int* _color) :
             x(_x),y(_y),length(_length),height(_height) {
                   color[0] = _color[0];
                   color[1] = _color[1];

@@ -1,8 +1,10 @@
 CC = g++
 WFLAGS = -Wall
-SFMLFLAGS_LINK = -L/nfs/home/sasl/eleves/rob/3800630/lib/SFML-2.5.1/lib/ -lsfml-graphics -lsfml-window -lsfml-system
-SFMLFLAGS_OBJ = -I/nfs/home/sasl/eleves/rob/3800630/lib/SFML-2.5.1/include/
-ALL.O = main.o affine.o mechant1.o joueurPhysique.o cercle.o rectangle.o jeu.o menu.o
+#SFMLFLAGS_LINK = -L/nfs/home/sasl/eleves/rob/3800630/lib/SFML-2.5.1/lib/ -lsfml-graphics -lsfml-window -lsfml-system
+SFMLFLAGS_LINK = -lsfml-graphics -lsfml-window -lsfml-system
+#SFMLFLAGS_OBJ = -I/nfs/home/sasl/eleves/rob/3800630/lib/SFML-2.5.1/include/
+SFMLFLAGS_OBJ =
+ALL.O = main.o Affine.o Mechant1.o JoueurPhysique.o Brique.o Jeu.o Menu.o
 
 #main
 hacode: $(ALL.O)
@@ -24,10 +26,7 @@ joueurPhysique.o: Joueurs/JoueurPhysique.cpp Joueurs/JoueurPhysique.hpp Joueurs/
 	$(CC) -c $< $(WFLAGS)
 
 #Formes/
-cercle.o: Formes/Cercle.cpp Formes/Cercle.hpp Formes/Forme.hpp
-	$(CC) -c $< $(WFLAGS)
-
-rectangle.o: Formes/Rectangle.cpp Formes/Rectangle.hpp Formes/Forme.hpp
+brique.o: Formes/Brique.cpp Formes/Brique.hpp Formes/Forme.hpp
 	$(CC) -c $< $(WFLAGS)
 
 #Etats/

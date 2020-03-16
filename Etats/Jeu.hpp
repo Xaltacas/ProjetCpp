@@ -1,18 +1,22 @@
 #ifndef JEU_HPP
 #define JEU_HPP
-#include "Etat.hpp"
+
+#include <vector>
+#include "Etat.hpp"7
+#include "../Joueurs/Joueur.hpp"
+#include "../Mechants/Mechant.hpp"
 
 class Jeu : public Etat{
 public:
       void step();
       void draw();
-      void instantiateProjectile(Projectile p);
+      //void instantiateProjectile(Projectile p);
 
 private:
       int score;
-      Joueur[2] joueurs;
+      Joueur joueurs[2];
       std::vector<Mechant> Mechants;
-      std::vector<Projectile> Projectiles;
+      //std::vector<Projectile> Projectiles;
 };
 
 #endif

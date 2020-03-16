@@ -7,7 +7,7 @@ class Forme{
 public:
 
       Forme(double _x, double y) : x(_x), y(_x) {};
-      Forme(double _x, double y, String modelpath) : x(_x), y(_x) {
+      Forme(double _x, double y, char* modelpath) : x(_x), y(_x) {
             //todo
       };
 
@@ -19,7 +19,7 @@ private:
       double x;
       double y;
 
-      Brique[] briques;
+      Brique briques[];
 
 
 };

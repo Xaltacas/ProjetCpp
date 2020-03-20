@@ -14,11 +14,14 @@ public:
       double getX(){return x;};
       double getY(){return y;};
 
+      bool intersect(Forme f);
+
 
 private:
       double x;
       double y;
 
+      int nbBriques;
       Brique briques[];
 
 

@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>875</x>
+      <y>406</y>
+      <w>161</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Jeu
+--
+- Gamestate: gamestate
+- score: int
+- Entites : entité
+- Script: script
+
+--
++ step()
++ instantiate()
++ draw(g:graphics)
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>728</x>
+      <y>602</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>/Joueur/
+--
+- vie:int
+- projectile:Projectile
+--
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>728</x>
+      <y>721</y>
+      <w>147</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>JoueurPhysique
+--
+
+--
++ Update()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>924</x>
+      <y>602</y>
+      <w>147</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>JoueurIA
+--
+
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>868</x>
+      <y>637</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>826</x>
+      <y>672</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>497</x>
+      <y>602</y>
+      <w>161</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Projectile
+--
+- traj:Trajectoire
+- faction:int
+
+--
++ updatepos()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>273</x>
+      <y>406</y>
+      <w>161</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>/Mechant/
+--
+- traj:Trajectoire
+- valeur:int
+- vie:int
+--
++ updatepos()
+/+ IA()/
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>602</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Trajectoire
+--
+- i:int
+- xInit:int
+- yInit:int
+--
++nextpoint()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>623</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>371</x>
+      <y>525</y>
+      <w>21</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>602</x>
+      <y>273</y>
+      <w>175</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Forme
+--
+- x:double
+- y:double
+- briques:Brique[]
+--
++ intersect(f:Forme):boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>77</x>
+      <y>378</y>
+      <w>161</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>M1
+--
+
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>77</x>
+      <y>476</y>
+      <w>161</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>M2
+--
+
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>231</x>
+      <y>427</y>
+      <w>56</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>231</x>
+      <y>511</y>
+      <w>56</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>686</x>
+      <y>161</y>
+      <w>175</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Rectangle
+--
+
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>455</x>
+      <y>161</y>
+      <w>196</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Cercle
+--
+
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>623</x>
+      <y>217</y>
+      <w>21</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>217</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>973</x>
+      <y>175</y>
+      <w>147</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Main
+--
+- e:Etat
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1064</x>
+      <y>406</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Menu
+--
+
+--
++ step()
++ draw(g:graphics)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1078</x>
+      <y>231</y>
+      <w>21</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>973</x>
+      <y>308</y>
+      <w>147</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>/Etat/
+--
+
+--
+/+ step()/
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1085</x>
+      <y>364</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>994</x>
+      <y>364</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>329</x>
+      <y>273</y>
+      <w>175</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Brique
+--
+- x:double
+- y:double
+- length:double
+- height:double
+- color:int[3]
+--
++ intersect(b:Brique):boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>497</x>
+      <y>294</y>
+      <w>119</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>609</x>
+      <y>413</y>
+      <w>161</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>/Entite/
+--
+- forme:Forme
+- instanciateList:Entite
+--
++ collide(e:Entite):Bool
+/+ update()/
++ draw()
+- instanciate(e:Entite)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>427</x>
+      <y>462</y>
+      <w>196</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>260.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>735</x>
+      <y>532</y>
+      <w>21</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>623</x>
+      <y>532</y>
+      <w>21</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>462</y>
+      <w>126</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black
+m1=1
+m2=0..n
+</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>658</x>
+      <y>336</y>
+      <w>21</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+bg=black
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

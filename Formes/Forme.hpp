@@ -2,6 +2,8 @@
 #define FORME_HPP
 
 #include "Brique.hpp"
+#include <iostream>
+#include <SFML/Graphics.hpp>
 
 class Forme{
 public:
@@ -16,14 +18,15 @@ public:
 
       bool intersect(Forme f);
 
+      void draw(sf::RenderWindow *window);
+
 
 private:
       double x;
       double y;
 
+      Brique* briques;
       int nbBriques;
-      Brique briques[];
-
 
 };
 

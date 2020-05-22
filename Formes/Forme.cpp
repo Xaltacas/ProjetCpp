@@ -10,3 +10,7 @@ bool Forme::intersect(Forme f){
 
       return false;
 }
+
+void Forme::draw(sf::RenderWindow *window){
+      std::cout << "draw" << std::endl;
+}

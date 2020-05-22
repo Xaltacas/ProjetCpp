@@ -4,9 +4,7 @@
 
 class JoueurPhysique : public Joueur{
 public:
-      void updatePos();
-      void actions();
-
+      void Update();
 };
 
 #endif

@@ -5,10 +5,13 @@
 #include "../Entite.hpp"
 
 class Joueur: public Entite {
+public:
+      Joueur(Forme* f):Entite(f){};
+
 
 private:
       int vie;
-      Projectile projectile;
+      Projectile projectile();
 };
 
 #endif

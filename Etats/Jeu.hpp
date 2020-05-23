@@ -6,8 +6,10 @@
 #include <vector>
 
 #include "Etat.hpp"
-#include "../Entites/Joueurs/Joueur.hpp"
+#include "../Entites/Joueurs/JoueurPhysique.hpp"
 #include "../Entites/Mechants/Mechant.hpp"
+#include "../Entites/Entite.hpp"
+#include "../Other/Gamestate.hpp"
 
 class Jeu {
 public:
@@ -15,12 +17,12 @@ public:
       void instantiate();
       void draw(sf::RenderWindow *window);
 
-      //Jeu();
+      Jeu();
 
 private:
-      std::vector<Entite> Entites;
+      std::vector<Entite*> Entites;
       //Script script;
-      //Gamestate gamestate;
+      struct Gamestate gstate;
       int score;
 };
 

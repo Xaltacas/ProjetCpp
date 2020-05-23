@@ -8,7 +8,9 @@
 class Forme{
 public:
 
-      Forme(double _x, double y) : x(_x), y(_x) {};
+      Forme(double _x, double y,int _nbBriques) : x(_x), y(_x),nbBriques(_nbBriques) {
+            briques = new Brique[_nbBriques]();
+      };
       Forme(double _x, double y, char* modelpath) : x(_x), y(_x) {
             //todo
       };
@@ -21,7 +23,7 @@ public:
       void draw(sf::RenderWindow *window);
 
 
-private:
+protected:
       double x;
       double y;
 

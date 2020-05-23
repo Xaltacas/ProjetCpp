@@ -15,4 +15,20 @@ void Jeu::draw(sf::RenderWindow *window){
       shape.setFillColor(sf::Color::Green);
       window->draw(shape);
 
+
+      for(auto &entite : Entites){
+            entite->draw(window);
+      }
+
+
+}
+
+
+#include "../Formes/Rectangle.hpp"
+#include <iostream>
+Jeu::Jeu(){
+      int col[] = {255,0,0};
+      Entites.push_back(new JoueurPhysique(new Rectangle(100,100,50,50,col)));
+
+      std::cout << "init jeu ok"<< std::endl;
 }

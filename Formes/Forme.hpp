@@ -18,6 +18,8 @@ public:
       double getX(){return x;};
       double getY(){return y;};
 
+      void move(double x,double y);
+
       bool intersect(Forme f);
 
       void draw(sf::RenderWindow *window);

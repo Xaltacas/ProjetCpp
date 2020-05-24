@@ -1,20 +1,25 @@
 #include "Jeu.hpp"
 
-void Jeu::step(){
-      std::cout << "step" << std::endl;
+void Jeu::step(int dt){
+      this -> gstate.dt = dt;
+
+      for(auto &entite : Entites){
+            entite->update();
+      }
+
+      this -> instantiate();
 }
 
 void Jeu::instantiate(){
-      std::cout << "instanciate" << std::endl;
 }
 
 void Jeu::draw(sf::RenderWindow *window){
-      std::cout << "draw" << std::endl;
 
+      /*
       sf::CircleShape shape(50.f);
       shape.setFillColor(sf::Color::Green);
       window->draw(shape);
-
+      */
 
       for(auto &entite : Entites){
             entite->draw(window);
@@ -27,6 +32,9 @@ void Jeu::draw(sf::RenderWindow *window){
 #include "../Formes/Rectangle.hpp"
 #include <iostream>
 Jeu::Jeu(){
+      this->gstate.time = 0;
+      this->gstate.dt = 0;
+
       int col[] = {255,0,0};
       Entites.push_back(new JoueurPhysique(new Rectangle(100,100,50,50,col)));
 

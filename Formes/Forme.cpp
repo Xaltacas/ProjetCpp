@@ -1,5 +1,10 @@
 #include "Forme.hpp"
 
+void Forme::move(double x,double y){
+      this->x += x;
+      this->y += y;
+}
+
 bool Forme::intersect(Forme f){
       for(int i = 0; i < this->nbBriques; i++){
             for(int j = 0; j < f.nbBriques; j++){
@@ -12,7 +17,6 @@ bool Forme::intersect(Forme f){
 }
 
 void Forme::draw(sf::RenderWindow *window){
-      std::cout << "draw" << std::endl;
       for(int i = 0; i < nbBriques; i++){
             briques[i].draw(this->x,this->y,window);
       }

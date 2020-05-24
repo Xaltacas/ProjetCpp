@@ -1,3 +1,8 @@
+
+
+#ifndef DPRINT_HPP
+#define DPRINT_HPP
+
 #include <iostream>
 
 void dPrint(char* message){
@@ -5,3 +10,5 @@ void dPrint(char* message){
       std::cout << message << std::endl;
       #endif
 }
+
+#endif

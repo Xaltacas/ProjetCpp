@@ -13,8 +13,7 @@
 
 class Jeu {
 public:
-      void step();
-      void instantiate();
+      void step(int dt);
       void draw(sf::RenderWindow *window);
 
       Jeu();
@@ -24,6 +23,8 @@ private:
       //Script script;
       struct Gamestate gstate;
       int score;
+
+      void instantiate();
 };
 
 #endif

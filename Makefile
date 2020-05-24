@@ -15,30 +15,30 @@ main.o: main.cpp $(ALL.H)
 	$(CC) -c $< $(WFLAGS) $(SFMLFLAGS_OBJ)
 
 #Trajectoires/
-Affine.o: Trajectoires/Affine.cpp Trajectoires/Affine.hpp Trajectoires/Trajectoire.hpp
+Affine.o: Trajectoires/Affine.cpp Trajectoires/Affine.hpp Trajectoires/Trajectoire.hpp debugPrint.hpp
 	$(CC) -c $< $(WFLAGS)
 
 #Mechants/
-Mechant1.o: Entites/Mechants/Mechant1.cpp Entites/Mechants/Mechant1.hpp Entites/Mechants/Mechant.hpp Entites/Projectiles/Projectile.hpp
+Mechant1.o: Entites/Mechants/Mechant1.cpp Entites/Mechants/Mechant1.hpp Entites/Mechants/Mechant.hpp Entites/Projectiles/Projectile.hpp debugPrint.hpp
 	$(CC) -c $< $(WFLAGS)
 
 #Joueurs/
-JoueurPhysique.o: Entites/Joueurs/JoueurPhysique.cpp Entites/Joueurs/JoueurPhysique.hpp Entites/Joueurs/Joueur.hpp Entites/Projectiles/Projectile.hpp
+JoueurPhysique.o: Entites/Joueurs/JoueurPhysique.cpp Entites/Joueurs/JoueurPhysique.hpp Entites/Joueurs/Joueur.hpp Entites/Projectiles/Projectile.hpp debugPrint.hpp
 	$(CC) -c $< $(WFLAGS)
 
 
 #Formes/
-Forme.o: Formes/Forme.cpp Formes/Forme.hpp Formes/Brique.hpp
+Forme.o: Formes/Forme.cpp Formes/Forme.hpp Formes/Brique.hpp debugPrint.hpp
 	$(CC) -c $< $(WFLAGS)
 
-Brique.o: Formes/Brique.cpp Formes/Brique.hpp
+Brique.o: Formes/Brique.cpp Formes/Brique.hpp debugPrint.hpp
 	$(CC) -c $< $(WFLAGS)
 
 #Etats/
-Jeu.o: Etats/Jeu.cpp Etats/Jeu.hpp Etats/Etat.hpp Other/Gamestate.hpp
+Jeu.o: Etats/Jeu.cpp Etats/Jeu.hpp Etats/Etat.hpp Other/Gamestate.hpp debugPrint.hpp
 	$(CC) -c $< $(WFLAGS) $(SFMLFLAGS_OBJ)
 
-Menu.o: Etats/Menu.cpp Etats/Menu.hpp Etats/Etat.hpp
+Menu.o: Etats/Menu.cpp Etats/Menu.hpp Etats/Etat.hpp debugPrint.hpp
 	$(CC) -c $< $(WFLAGS) $(SFMLFLAGS_OBJ)
 
 

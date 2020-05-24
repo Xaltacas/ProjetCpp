@@ -5,45 +5,57 @@
 #include "Etats/Jeu.hpp"
 #include "Formes/Forme.hpp"
 
+//#define DEBUG
+#include "debugPrint.hpp"
+
 
 int main(){
 
       std::cout << "ca complie!! incroyable!!"<< std::endl;
-      sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+      sf::RenderWindow window(sf::VideoMode(600, 900), "Hacode");
+
+      sf::Texture texture;
+      if (!texture.loadFromFile("background.png"))
+      {
+          dPrint("Impossible to load background");
+      }
+
+      sf::Sprite sprite;
+      sprite.setTexture(texture);
+
 
       unsigned long int now;
       unsigned long int before;
       now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
       before = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 
-      std::cout << "pre init"<< std::endl;
+      dPrint("pre init");
       Jeu jeu = Jeu();
-      std::cout << "post init"<< std::endl;
+      dPrint("post init");
 
       while (window.isOpen())
       {
-          std::cout << "post init 2"<< std::endl;
+          dPrint("post init 2");
           sf::Event event;
           while (window.pollEvent(event))
           {
               if (event.type == sf::Event::Closed)
                   window.close();
           }
-          std::cout << "post init 3"<< std::endl;
+          dPrint("post init 3");
 
-          std::cout << "pre display"<< std::endl;
+          dPrint("pre display");
           window.clear();
+          window.draw(sprite);
           jeu.step();
           jeu.instantiate();
           jeu.draw(&window);
           window.display();
-          std::cout << "display1"<< std::endl;
+          dPrint("post display");
 
           while (now - before < 10){
                 now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
           }
-
-          std::cout << now << std::endl;
           std::cout << "fps = " << 1000/(now-before) << std::endl;
           before = now;
 

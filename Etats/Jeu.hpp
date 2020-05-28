@@ -10,6 +10,7 @@
 #include "../Entites/Mechants/Mechant.hpp"
 #include "../Entites/Entite.hpp"
 #include "../Other/Gamestate.hpp"
+#include "../Other/Script.hpp"
 
 class Jeu {
 public:
@@ -20,7 +21,7 @@ public:
 
 private:
       std::vector<Entite*> Entites;
-      //Script script;
+      Script script;
       struct Gamestate gstate;
       int score;
 

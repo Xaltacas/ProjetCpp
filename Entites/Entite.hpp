@@ -2,6 +2,7 @@
 #define ENTITE_HPP
 
 #include "../Formes/Forme.hpp"
+#include "../Other/Gamestate.hpp"
 
 class Entite{
 public:
@@ -14,15 +15,17 @@ public:
             this->forme->draw(window);
       }
 
-      virtual void update()=0;
+      virtual void update(struct Gamestate *gstate)=0;
 
       Entite(Forme* f){
             this->forme = f;
       }
 
+      std::vector<Entite*> instanciateList;
+
+
 protected:
       Forme* forme;
-      std::vector<Entite*> instanciateList;
 
       void Instanciate(Entite *e){
             instanciateList.push_back(e);

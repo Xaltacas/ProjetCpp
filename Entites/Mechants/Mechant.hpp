@@ -1,14 +1,17 @@
 #ifndef MECHANT_HPP
 #define MECHANT_HPP
 
-class Mechant{
+#include "../../Trajectoires/Trajectoire.hpp"
+#include "../Entite.hpp"
+
+class Mechant: public Entite{
 public:
-      virtual void updatePos();
-      virtual void ia();
+      void update(struct Gamestate *gstate);
+
+      Mechant(Forme* f,Trajectoire* t):Entite(f),traj(t){};
 
 private:
-      //Trajectoire traj;
-      int valeur;
+      Trajectoire* traj;
       int vie;
 };
 

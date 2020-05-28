@@ -5,7 +5,7 @@
 
 class JoueurPhysique : public Joueur{
 public:
-      void update();
+      void update(struct Gamestate *gstate);
 
       JoueurPhysique(Forme* f):Joueur(f){};
 };

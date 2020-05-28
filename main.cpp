@@ -5,8 +5,6 @@
 #include "Etats/Jeu.hpp"
 #include "Formes/Forme.hpp"
 
-//#define DEBUG
-#include "debugPrint.hpp"
 
 
 int main(){
@@ -17,7 +15,7 @@ int main(){
       sf::Texture texture;
       if (!texture.loadFromFile("background.png"))
       {
-            dPrint("Impossible to load background");
+            std::cout <<"Impossible to load background"<< std::endl;
       }
 
       sf::Sprite sprite;
@@ -28,9 +26,8 @@ int main(){
       unsigned long int before = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
       unsigned int dt;
 
-      dPrint("pre init");
       Jeu jeu = Jeu();
-      dPrint("post init");
+
 
       while (window.isOpen())
       {
@@ -40,14 +37,12 @@ int main(){
             dt = now-before;
             before = now;
             std::cout << "fps = " << 1000/dt << std::endl;
-            dPrint("pre display");
             window.clear();
             window.setSize({600,900});
             window.draw(sprite);
             jeu.step(dt);
             jeu.draw(&window);
             window.display();
-            dPrint("post display");
 
 
             sf::Event event;

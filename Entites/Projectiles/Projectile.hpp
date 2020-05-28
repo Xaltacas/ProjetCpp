@@ -4,5 +4,5 @@ class Projectile: public Entite {
 public:
       int oui;
 
-      void update();
+      void update(struct Gamestate *gstate);
 };

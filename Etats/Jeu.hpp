@@ -7,6 +7,7 @@
 
 #include "Etat.hpp"
 #include "../Entites/Joueurs/JoueurPhysique.hpp"
+#include "../Entites/Joueurs/JoueurIA.hpp"
 #include "../Entites/Mechants/Mechant.hpp"
 #include "../Entites/Entite.hpp"
 #include "../Other/Gamestate.hpp"

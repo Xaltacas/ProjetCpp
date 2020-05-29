@@ -5,8 +5,8 @@ void Trajectoire::update(int dt){
       double moveX = 0;
       double moveY = 0;
 
-      this -> temps += 0.001*dt;
       double ft = 0.001*dt;
+      this -> temps += ft;
 
       moveX += this -> affX *ft;
       moveY += this -> affY *ft;

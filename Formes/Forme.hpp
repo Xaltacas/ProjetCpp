@@ -8,10 +8,10 @@
 class Forme{
 public:
 
-      Forme(double _x, double y,int _nbBriques) : x(_x), y(_x),nbBriques(_nbBriques) {
+      Forme(double _x, double _y,int _nbBriques) : x(_x), y(_y),nbBriques(_nbBriques) {
             briques = new Brique[_nbBriques]();
       };
-      Forme(double _x, double y, char* modelpath) : x(_x), y(_x) {
+      Forme(double _x, double _y, char* modelpath) : x(_x), y(_y) {
             //todo
       };
 

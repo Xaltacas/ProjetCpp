@@ -6,7 +6,7 @@ public:
       virtual void update(int dt);
 
       Trajectoire(double _affX, double _affY, double _ampSinX, double _ampSinY, double _freqSinX, double _freqSinY):
-      affX(_affX), affY(_affY), ampSinX(_ampSinX), ampSinY(_ampSinY), freqSinX(_freqSinX), freqSinY(_freqSinY), temps(0){};
+      temps(0), affX(_affX), affY(_affY), ampSinX(_ampSinX), ampSinY(_ampSinY), freqSinX(_freqSinX), freqSinY(_freqSinY){};
 
       double getX(){
             return nextX;

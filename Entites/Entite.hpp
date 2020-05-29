@@ -7,7 +7,7 @@
 class Entite{
 public:
 
-      bool Collide(Entite *e){
+      bool collide(Entite *e){
             return this->forme->intersect(*e->forme);
       }
 

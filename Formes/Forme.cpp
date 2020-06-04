@@ -8,7 +8,7 @@ void Forme::move(double x,double y){
 bool Forme::intersect(Forme f){
       for(int i = 0; i < this->nbBriques; i++){
             for(int j = 0; j < f.nbBriques; j++){
-                  if(this->briques[i].intersect(f.briques[j]))
+                  if(this->briques[i].intersect(f.briques[j],x,y,f.x,f.y))
                         return true;
             }
       }

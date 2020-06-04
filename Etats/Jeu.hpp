@@ -12,6 +12,8 @@
 #include "../Entites/Entite.hpp"
 #include "../Other/Gamestate.hpp"
 #include "../Other/Script.hpp"
+#include "../Formes/Rectangle.hpp"
+#include "../Formes/Cercle.hpp"
 
 class Jeu {
 public:

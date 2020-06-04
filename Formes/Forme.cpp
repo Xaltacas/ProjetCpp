@@ -18,6 +18,7 @@ bool Forme::intersect(Forme f){
 
 void Forme::draw(sf::RenderWindow *window){
       for(int i = 0; i < nbBriques; i++){
+            
             briques[i].draw(this->x,this->y,window);
       }
 }

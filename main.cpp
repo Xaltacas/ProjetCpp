@@ -39,9 +39,13 @@ int main(){
             std::cout << "fps = " << 1000/dt << std::endl;
             window.clear();
             window.setSize({600,900});
+            std::cout << "cc0"<< std::endl;
             window.draw(sprite);
+            std::cout << "cc1"<< std::endl;
             jeu.step(dt);
+            std::cout << "cc2"<< std::endl;
             jeu.draw(&window);
+            std::cout << "cc3"<< std::endl;
             window.display();
 
 

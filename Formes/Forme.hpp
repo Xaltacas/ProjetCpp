@@ -13,6 +13,7 @@ public:
       Forme(double _x, double _y,int _nbBriques) : x(_x), y(_y),nbBriques(_nbBriques) {
             briques = new Brique[_nbBriques]();
       };
+
       Forme(double _x, double _y, std::string modelpath) : x(_x), y(_y) {
             std::cout << modelpath << std::endl;
             std::ifstream flux (modelpath);
@@ -36,6 +37,12 @@ public:
                   std::cout << "erreur chargement "<< std::endl;
             }
       };
+
+      /*
+      ~Forme(){
+            delete(briques);
+      }
+      */
 
       double getX(){return x;};
       double getY(){return y;};

@@ -1,9 +1,9 @@
 #include "Script.hpp"
 
 void Script::update(struct Gamestate *gstate){
-      if(gstate -> time > lastTime + 10){
-            lastTime = gstate -> time;
-            points += time;
+      if(gstate -> time > this -> lastTime + 10){
+            this -> lastTime = gstate -> time;
+            this -> points += gstate -> time;
 
             int e = rand() % this -> nbEvent ;
 
@@ -46,55 +46,55 @@ void Script::update(struct Gamestate *gstate){
 }
 
 void Script::event1(){
-      this -> instantiateList.push_back(new Mechant(new Forme(200,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(200,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(200,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(200,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(200,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(200,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event2(){
-      this -> instantiateList.push_back(new Mechant(new Forme(400,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(400,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(400,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(400,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(400,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(400,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event3(){
-      this -> instantiateList.push_back(new Mechant(new Forme(100,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(500,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(100,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(500,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event4(){
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event5(){
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event6(){
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event7(){
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event8(){
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event9(){
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instantiateList.push_back(new Mechant(new Forme(300,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"//path to texture"),new Trajectoire(0,50,200,0,5,0)));
 }

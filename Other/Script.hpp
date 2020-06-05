@@ -2,7 +2,7 @@
 #define SCRIPT_HPP
 
 #include "../Entites/Entite.hpp"
-#include "../Entite/Mechant.hpp"
+#include "../Entites/Mechants/Mechant.hpp"
 #include "Gamestate.hpp"
 #include <stdlib.h>
 
@@ -13,15 +13,29 @@ public:
 
       void update(struct Gamestate *gstate);
 
-      Script():points(0),lastTime(0){};
+      Script():points(0),lastTime(0){
+            nbEvent = 10;
+            eventCost = new int[nbEvent];
+            eventCost[0] = 0;
+            eventCost[1] = 10;
+            eventCost[2] = 20;
+            eventCost[3] = 20;
+            eventCost[4] = 30;
+            eventCost[5] = 40;
+            eventCost[6] = 40;
+            eventCost[7] = 50;
+            eventCost[8] = 70;
+            eventCost[9] = 100;
+
+      };
 
 
 private:
       double points;
       double lastTime;
 
-      int nbEvent = 10;
-      int eventCost[] = {0,10,20,20,30,35,40,40,50,90};
+      int nbEvent;
+      int *eventCost;
 
       void event1();
       void event2();

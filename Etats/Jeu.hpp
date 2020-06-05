@@ -24,6 +24,8 @@ public:
 
 private:
       std::vector<Entite*> Entites;
+      std::vector<Entite*> EntitesTemp;
+
       Script script;
       struct Gamestate gstate;
 

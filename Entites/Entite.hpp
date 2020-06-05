@@ -21,6 +21,12 @@ public:
             this->forme = f;
       }
 
+      /*
+      ~Entite(){
+            delete(forme);
+      }
+      */
+
       std::vector<Entite*> instanciateList;
 
 

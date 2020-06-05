@@ -10,6 +10,12 @@ public:
 
       Mechant(Forme* f,Trajectoire* t):Entite(f),traj(t){};
 
+      /*
+      ~Mechant(){
+            delete(traj);
+      }
+      */
+
 private:
       Trajectoire* traj;
       int vie;

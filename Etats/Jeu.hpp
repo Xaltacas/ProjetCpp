@@ -26,7 +26,6 @@ private:
       std::vector<Entite*> Entites;
       Script script;
       struct Gamestate gstate;
-      int score;
 
       void instantiate();
 };

@@ -70,7 +70,7 @@ void Jeu::draw(sf::RenderWindow *window){
 
 Jeu::Jeu(){
       int col[] = {255,0,0};
-      Entites.push_back(new JoueurPhysique(new Rectangle(100,100,50,50,col)));
+      Entites.push_back(new JoueurPhysique(new Forme(100,100,"/home/roborongeurs/Desktop/ProjetCpp/Formes/brique.txt")));
       this->gstate.entityCount++;
 
       int col2[] = {255,255,0};
@@ -79,7 +79,7 @@ Jeu::Jeu(){
 
 
       int col3[] = {0,255,0};
-      Entites.push_back(new Mechant(new Cercle(300,300,50,col3),new Trajectoire(0,50,200,0,5,0)));
+      Entites.push_back(new Mechant(new Cercle(300,300,20,col3),new Trajectoire(0,50,200,0,5,0)));
       this->gstate.entityCount++;
 
 

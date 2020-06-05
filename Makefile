@@ -39,7 +39,7 @@ Brique.o: Formes/Brique.cpp Formes/Brique.hpp
 
 
 #Etats/
-Jeu.o: Etats/Jeu.cpp Etats/Jeu.hpp Etats/Etat.hpp Other/Gamestate.hpp Other/Script.hpp Entites/Joueurs/JoueurIA.hpp Formes/Rectangle.hpp 
+Jeu.o: Etats/Jeu.cpp Etats/Jeu.hpp Etats/Etat.hpp Other/Gamestate.hpp Other/Script.hpp Entites/Joueurs/JoueurIA.hpp Formes/Rectangle.hpp Formes/Cercle.hpp
 	$(CC) -c $< $(WFLAGS) $(SFMLFLAGS_OBJ)
 
 Menu.o: Etats/Menu.cpp Etats/Menu.hpp Etats/Etat.hpp

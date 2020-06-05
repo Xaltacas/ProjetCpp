@@ -77,11 +77,11 @@ Jeu::Jeu(){
       Entites.push_back(new JoueurIA(new Rectangle(100,700,50,50,col2)));
       this->gstate.entityCount++;
 
-      /*
-      //int col3[] = {0,255,0};
-      Entites.push_back(new Mechant(new Forme(300,300,"~Desktop/ProjetCpp/Etats/brique.txt"),new Trajectoire(0,50,200,0,5,0)));
+
+      int col3[] = {0,255,0};
+      Entites.push_back(new Mechant(new Cercle(300,300,50,col3),new Trajectoire(0,50,200,0,5,0)));
       this->gstate.entityCount++;
-      */
+
 
       std::cout << "init jeu ok"<< std::endl;
 }

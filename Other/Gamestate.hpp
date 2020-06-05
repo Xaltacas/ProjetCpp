@@ -5,6 +5,7 @@
 
 
 struct Gamestate{
+      
       Gamestate(){
             time = 0;
             dt = 0;

@@ -7,4 +7,5 @@ void Mechant::update(struct Gamestate *gstate){
       this->forme->move(this->traj->getX(),this->traj->getY());
 
 
+
 }

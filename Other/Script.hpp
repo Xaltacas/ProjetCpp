@@ -11,6 +11,10 @@ public:
 
       void update(struct Gamestate *gstate);
 
+private:
+      int points;
+      void* events[] = {};
+
 };
 
 

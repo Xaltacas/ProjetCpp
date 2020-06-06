@@ -5,7 +5,7 @@
 
 class Brique{
 public:
-      bool intersect(Brique b, int _x1, int _y1, int _x2 ,int y2);
+      bool intersect(Brique b, int _x1, int _y1, int _x2 ,int _y2);
 
       void draw(double x,double y,sf::RenderWindow *window);
 

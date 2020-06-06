@@ -19,7 +19,7 @@ public:
             std::ifstream flux(modelpath.c_str());
             std::cout << "je suis la "<< std::endl;
             if(flux){
-                  int _nbBriques;
+                  int _nbBriques = 0;
                   flux >> _nbBriques;
                   std::cout << "nombre de brique :  "<< _nbBriques << std::endl;
                   briques = new Brique[_nbBriques]();

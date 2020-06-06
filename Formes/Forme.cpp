@@ -6,10 +6,10 @@ void Forme::move(double x,double y){
 }
 
 bool Forme::intersect(Forme f){
-      if( !(( f.x + 30 < x )||
-            ( f.y + 30 < y )||
-            ( x + 30 < f.x )||
-            ( y + 30 < f.y )) ){
+      if( !(( f.x + 60 < x )||
+            ( f.y + 60 < y )||
+            ( x + 60 < f.x )||
+            ( y + 60 < f.y )) ){
 
             for(int i = 0; i < this->nbBriques; i++){
                   for(int j = 0; j < f.nbBriques; j++){

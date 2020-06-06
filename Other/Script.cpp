@@ -46,55 +46,55 @@ void Script::update(struct Gamestate *gstate){
 }
 
 void Script::event1(){
-      this -> instanciateList.push_back(new Mechant(new Forme(200,-100,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(200,-200,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(200,-300,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(200,-100,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(200,-200,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(200,-300,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event2(){
-      this -> instanciateList.push_back(new Mechant(new Forme(400,-100,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(400,-200,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(400,-300,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(400,-100,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(400,-200,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(400,-300,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event3(){
-      this -> instanciateList.push_back(new Mechant(new Forme(100,-100,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(500,-100,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(100,-100,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(500,-100,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event4(){
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event5(){
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event6(){
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event7(){
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event8(){
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
 }
 
 void Script::event9(){
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
-      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"Formes/brique2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-100,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-200,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
+      this -> instanciateList.push_back(new Mechant(new Forme(300,-300,"Formes/Models/J2.txt"),new Trajectoire(0,50,200,0,5,0)));
 }

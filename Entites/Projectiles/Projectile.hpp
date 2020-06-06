@@ -1,3 +1,7 @@
+#ifndef PROJECTILE_HPP
+#define PROJECTILE_HPP
+
+
 #include "../../Trajectoires/Trajectoire.hpp"
 #include "../Entite.hpp"
 
@@ -16,3 +20,5 @@ public:
 private:
       Trajectoire* traj;
 };
+
+#endif

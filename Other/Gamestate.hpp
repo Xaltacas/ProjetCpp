@@ -24,7 +24,9 @@ struct Gamestate{
                         collisionMatrix[i][j] = false;
             }
 
-            currEntity =0;
+            currEntity = 0;
+            score = 0;
+            alivePlayer = 0;
       }
 
       double time;
@@ -41,6 +43,10 @@ struct Gamestate{
       int entityType[MAX_ENTITY];
 
       int currEntity;
+      int score;
+
+      int alivePlayer;
+
 };
 
 #endif

@@ -1,7 +1,7 @@
 #include "Script.hpp"
 
 void Script::update(struct Gamestate *gstate){
-      if(gstate -> time > this -> lastTime + 10){
+      if(gstate -> time > this -> lastTime + 5){
             this -> lastTime = gstate -> time;
             this -> points += gstate -> time;
 

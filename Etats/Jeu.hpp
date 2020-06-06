@@ -28,6 +28,10 @@ private:
       Script script;
       struct Gamestate gstate;
 
+      sf::Font font;
+      sf::Text scoreText;
+      sf::Text perdu;
+
       void instantiate();
 };
 

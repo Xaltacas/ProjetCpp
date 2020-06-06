@@ -51,5 +51,17 @@ Jeu.o: Etats/Jeu.cpp Etats/Jeu.hpp Other/Gamestate.hpp Other/Script.hpp Entites/
 Script.o: Other/Script.cpp Other/Script.hpp Other/Gamestate.hpp Entites/Entite.hpp
 	$(CC) -c $< $(WFLAGS) $(SFMLFLAGS_OBJ)
 
+
+
+
 clean:
 	rm *.o
+
+
+
+
+test_texture: test_texture.o Forme.o Brique.o
+	$(CC) -o $@ test_texture.o Forme.o Brique.o $(WFLAGS) $(SFMLFLAGS_LINK)
+
+test_texture.o: test_texture.cpp Formes/Brique.hpp Formes/Forme.hpp
+	$(CC) -c $< $(WFLAGS) $(SFMLFLAGS_OBJ)

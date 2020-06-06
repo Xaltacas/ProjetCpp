@@ -18,12 +18,9 @@ void Jeu::step(int dt){
                   if(Entites[i] -> collide(Entites[j])){
                         this->gstate.collisionMatrix[i][j] = true;
                         this->gstate.collisionMatrix[j][i] = true;
-                        std::cout << "collision   "<< i <<"(type = " << this -> gstate.entityType[i] <<" ) : "<<j<< std::endl;
+                        //std::cout << "collision   "<< i <<"(type = " << this -> gstate.entityType[i] <<" ) : "<<j<< std::endl;
                   }
-                  else{
-                        this->gstate.collisionMatrix[i][j] = false;
-                        this->gstate.collisionMatrix[j][i] = false;
-                  }
+
             }
 
       }
@@ -44,11 +41,15 @@ void Jeu::step(int dt){
 
       for(int i = nbEntity - 1; i>=0;i--){
             if(this -> gstate.deleteList[i]){
-                  std::cout << "vector size : "<< Entites.size() <<  std::endl;
+                  //std::cout << "vector size : "<< Entites.size() <<  std::endl;
                   std::cout << "erased entity : "<< i <<  std::endl;
                   std::cout << "vector size : "<< Entites.size() <<  std::endl;
+                  Entite *temp = Entites[i];
+
                   Entites.erase(Entites.begin() + i);
                   this -> gstate.entityCount--;
+
+                  delete temp;
             }
       }
 }
@@ -88,26 +89,43 @@ void Jeu::draw(sf::RenderWindow *window){
       }
 
 
+      scoreText.setString("score : " +std::to_string(this -> gstate.score));
+      window -> draw(scoreText);
+
+      if(this -> gstate.alivePlayer == 0){
+            window -> draw(perdu);
+      }
+
 }
 
-#include "../Formes/Rectangle.hpp"
-#include "../Formes/Cercle.hpp"
 #include <string>
 
 Jeu::Jeu(){
-      int col[] = {255,0,0};
-      Entites.push_back(new JoueurPhysique(new Forme(100,100,"Formes/Models/J1.txt")));
-      this->gstate.entityCount++;
 
-      int col2[] = {255,255,0};
+      Entites.push_back(new JoueurPhysique(new Forme(300,700,"Formes/Models/J1.txt")));
+      this->gstate.entityCount++;
+      this->gstate.alivePlayer++;
+
+
+
       Entites.push_back(new JoueurIA(new Forme(100,700,"Formes/Models/J2.txt")));
       this->gstate.entityCount++;
+      this->gstate.alivePlayer++;
 
 
-      /*int col3[] = {0,255,0};
-      Entites.push_back(new Mechant(new Cercle(300,300,20,col3),new Trajectoire(0,50,200,0,5,0)));
-      this->gstate.entityCount++;*/
+      if (!font.loadFromFile("Roboto-Black.ttf"))
+      {
+          std::cout << "erreur chargement font" <<  std::endl;
+      }
+      scoreText.setFont(font);
+      scoreText.setCharacterSize(24);
+      scoreText.setFillColor(sf::Color::White);
 
+      perdu.setFont(font);
+      perdu.setCharacterSize(70);
+      perdu.setString("Perdu");
+      perdu.setPosition({200,400});
+      perdu.setFillColor(sf::Color::Red);
 
       std::cout << "init jeu ok"<< std::endl;
 }

@@ -48,7 +48,21 @@ void JoueurPhysique::update(struct Gamestate *gstate){
       }
 
 
-
-
       this->forme->move(movex,movey);
+
+
+      for(int i = 0; i < gstate -> entityCount;i++){
+            if(gstate -> collisionMatrix[gstate -> currEntity][i]){
+                  if(gstate -> entityType[i] == ENTITE_P_MECHANT){
+                        this -> vie--;
+                        gstate -> deleteList[i] = true;
+                  }
+
+            }
+      }
+
+      if(this -> vie <= 0){
+            gstate -> deleteList[gstate -> currEntity] = true;
+            gstate -> alivePlayer--;
+      }
 };

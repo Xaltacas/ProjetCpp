@@ -8,7 +8,7 @@ class JoueurIA : public Joueur{
 public:
       void update(struct Gamestate *gstate);
 
-      JoueurIA(Forme* f):Joueur(f),traj(new Trajectoire(0,0,300,0,1.5,0)){};
+      JoueurIA(Forme* f):Joueur(f),traj(new Trajectoire(0,0,300,0,1.5,0)),shotCooldown(0.8),lastShot(0){};
 
       /*
       ~JoueurIA(){
@@ -18,6 +18,9 @@ public:
 
 private:
       Trajectoire* traj;
+
+      double shotCooldown;
+      double lastShot;
 
 
 };

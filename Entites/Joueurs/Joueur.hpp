@@ -1,12 +1,13 @@
 #ifndef JOUEUR_HPP
 #define JOUEUR_HPP
 
-#include "../Projectiles/Projectile.hpp"
+
 #include "../Entite.hpp"
+#include "../Projectiles/Projectile.hpp"
 
 class Joueur: public Entite {
 public:
-Joueur(Forme* f):Entite(f,ENTITE_JOUEUR),vitesse(400){};
+Joueur(Forme* f):Entite(f,ENTITE_JOUEUR),vitesse(400),vie(3){};
 
 protected:
       int vitesse; //vitesse en pixels par seconde;

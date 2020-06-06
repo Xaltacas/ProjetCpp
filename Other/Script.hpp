@@ -13,7 +13,7 @@ public:
 
       void update(struct Gamestate *gstate);
 
-      Script():points(0),lastTime(0){
+      Script():points(10),lastTime(0){
             nbEvent = 12;
             eventCost = new int[nbEvent];
             eventCost[0] = 0;
@@ -26,8 +26,8 @@ public:
             eventCost[7] = 50;
             eventCost[8] = 70;
             eventCost[9] = 100;
-            eventCost[10] = 10;
-            eventCost[11] = 10;
+            eventCost[10] = 5;
+            eventCost[11] = 5;
             eventCost[12] = 10;
             eventCost[13] = 10;
 

@@ -77,11 +77,11 @@ void Jeu::draw(sf::RenderWindow *window){
 
 Jeu::Jeu(){
       int col[] = {255,0,0};
-      Entites.push_back(new JoueurPhysique(new Forme(100,100,"Formes/brique.txt")));
+      Entites.push_back(new JoueurPhysique(new Forme(100,100,"/home/roborongeurs/Desktop/ProjetCpp/Formes/Models/J1.txt")));
       this->gstate.entityCount++;
 
       int col2[] = {255,255,0};
-      Entites.push_back(new JoueurIA(new Rectangle(100,700,50,50,col2)));
+      Entites.push_back(new JoueurIA(new Forme(100,700,"/home/roborongeurs/Desktop/ProjetCpp/Formes/Models/J2.txt")));
       this->gstate.entityCount++;
 
 

@@ -104,9 +104,9 @@ Jeu::Jeu(){
       this->gstate.entityCount++;
 
 
-      int col3[] = {0,255,0};
+      /*int col3[] = {0,255,0};
       Entites.push_back(new Mechant(new Cercle(300,300,20,col3),new Trajectoire(0,50,200,0,5,0)));
-      this->gstate.entityCount++;
+      this->gstate.entityCount++;*/
 
 
       std::cout << "init jeu ok"<< std::endl;

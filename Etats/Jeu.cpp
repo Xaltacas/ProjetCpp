@@ -6,11 +6,12 @@ void Jeu::step(int dt){
       this -> gstate.time += 0.001*dt;
 
       for(int i = 0; i < this -> gstate.entityCount;i++){
+            this -> gstate.entityType[i] = Entites[i] -> getType();
             for(int j = i+1; j < this -> gstate.entityCount;j++){
                   if(Entites[i] -> collide(Entites[j])){
                         this->gstate.collisionMatrix[i][j] = true;
                         this->gstate.collisionMatrix[j][i] = true;
-                        std::cout << "collision   "<< i<<" : "<<j<< std::endl;
+                        std::cout << "collision   "<< i <<"(type = " << this -> gstate.entityType[i] <<" ) : "<<j<< std::endl;
                   }
                   else{
                         this->gstate.collisionMatrix[i][j] = false;
@@ -21,24 +22,30 @@ void Jeu::step(int dt){
       }
 
 
+      this -> gstate.currEntity = 0;
 
       for(auto &entite : Entites){
             entite->update(&gstate);
+            this -> gstate.currEntity++;
       }
+
+      this -> script.update(&gstate);
 
       this -> instantiate();
 }
 
 void Jeu::instantiate(){
 
-      for(auto &entite : Entites){
-            for(auto &ientite : entite->instanciateList){
+      int nbEntite = this->gstate.entityCount;
+
+      for(int i =0; i< nbEntite;i++){
+            for(auto &entite : Entites[i]->instanciateList){
                   if(this -> gstate.entityCount < gstate.maxEntity){
-                        this -> EntitesTemp.push_back(ientite);
+                        this -> EntitesTemp.push_back(entite);
                         this -> gstate.entityCount++;
                   }
             }
-            entite->instanciateList.clear();
+            Entites[i]->instanciateList.clear();
       }
 
       for(auto &entite : script.instanciateList){
@@ -70,7 +77,7 @@ void Jeu::draw(sf::RenderWindow *window){
 
 Jeu::Jeu(){
       int col[] = {255,0,0};
-      Entites.push_back(new JoueurPhysique(new Forme(100,100,"/home/roborongeurs/Desktop/ProjetCpp/Formes/brique.txt")));
+      Entites.push_back(new JoueurPhysique(new Forme(100,100,"Formes/brique.txt")));
       this->gstate.entityCount++;
 
       int col2[] = {255,255,0};

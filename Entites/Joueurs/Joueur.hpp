@@ -6,12 +6,11 @@
 
 class Joueur: public Entite {
 public:
-      Joueur(Forme* f):Entite(f),vitesse(400){};
+Joueur(Forme* f):Entite(f,ENTITE_JOUEUR),vitesse(400){};
 
 protected:
       int vitesse; //vitesse en pixels par seconde;
       int vie;
-      Projectile projectile();
 };
 
 #endif

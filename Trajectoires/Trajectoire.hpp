@@ -16,6 +16,8 @@ public:
             return nextY;
       }
 
+      ~Trajectoire(){}
+
 
 private:
       double temps;

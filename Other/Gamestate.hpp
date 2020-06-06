@@ -5,7 +5,7 @@
 
 
 struct Gamestate{
-      
+
       Gamestate(){
             time = 0;
             dt = 0;
@@ -23,6 +23,8 @@ struct Gamestate{
                   for(int j =0; j < MAX_ENTITY; j++)
                         collisionMatrix[i][j] = false;
             }
+
+            currEntity =0;
       }
 
       double time;
@@ -37,6 +39,8 @@ struct Gamestate{
       bool collisionMatrix[MAX_ENTITY][MAX_ENTITY];
       bool deleteList[MAX_ENTITY];
       int entityType[MAX_ENTITY];
+
+      int currEntity;
 };
 
 #endif

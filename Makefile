@@ -4,8 +4,8 @@ WFLAGS = -Wall
 SFMLFLAGS_LINK = -lsfml-graphics -lsfml-window -lsfml-system
 #SFMLFLAGS_OBJ = -I/nfs/home/sasl/eleves/rob/3800630/lib/SFML-2.5.1/include/
 SFMLFLAGS_OBJ =
-ALL.O = main.o Mechant.o Trajectoire.o JoueurPhysique.o JoueurIA.o Forme.o Brique.o Jeu.o Menu.o Script.o
-ALL.H = Trajectoires/Trajectoire.hpp Entites/Entite.hpp Entites/Mechants/Mechant.hpp Entites/Joueurs/JoueurPhysique.hpp Entites/Joueurs/Joueur.hpp Formes/Brique.hpp Formes/Forme.hpp Etats/Jeu.hpp Etats/Menu.hpp Etats/Etat.hpp Other/Script.hpp Other/Gamestate.hpp
+ALL.O = main.o Mechant.o Trajectoire.o JoueurPhysique.o JoueurIA.o Forme.o Brique.o Jeu.o Menu.o Script.o Projectile.o
+ALL.H = Trajectoires/Trajectoire.hpp Entites/Entite.hpp Entites/Mechants/Mechant.hpp Entites/Projectiles/Projectile.hpp Entites/Joueurs/JoueurPhysique.hpp Entites/Joueurs/Joueur.hpp Formes/Brique.hpp Formes/Forme.hpp Etats/Jeu.hpp Etats/Menu.hpp Etats/Etat.hpp Other/Script.hpp Other/Gamestate.hpp
 
 #main
 hacode: $(ALL.O) $(ALL.H)
@@ -29,6 +29,10 @@ JoueurPhysique.o: Entites/Joueurs/JoueurPhysique.cpp Entites/Joueurs/JoueurPhysi
 JoueurIA.o: Entites/Joueurs/JoueurIA.cpp Entites/Joueurs/JoueurIA.hpp Entites/Joueurs/Joueur.hpp Entites/Entite.hpp Trajectoires/Trajectoire.hpp Entites/Projectiles/Projectile.hpp
 	$(CC) -c $< $(WFLAGS)
 
+#Projectiles/
+Projectile.o: Entites/Projectiles/Projectile.cpp Entites/Projectiles/Projectile.hpp Entites/Entite.hpp Trajectoires/Trajectoire.hpp
+	$(CC) -c $< $(WFLAGS)
+
 
 #Formes/
 Forme.o: Formes/Forme.cpp Formes/Forme.hpp Formes/Brique.hpp
@@ -48,7 +52,6 @@ Menu.o: Etats/Menu.cpp Etats/Menu.hpp Etats/Etat.hpp
 #Other/
 Script.o: Other/Script.cpp Other/Script.hpp Other/Gamestate.hpp Entites/Entite.hpp
 	$(CC) -c $< $(WFLAGS) $(SFMLFLAGS_OBJ)
-
 
 clean:
 	rm *.o

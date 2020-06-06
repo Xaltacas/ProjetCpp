@@ -5,6 +5,13 @@ void Jeu::step(int dt){
       this -> gstate.dt = dt;
       this -> gstate.time += 0.001*dt;
 
+      for(int i = 0; i < MAX_ENTITY; i++){
+            gstate.deleteList[i] = false;
+            gstate.entityType[i] = 0;
+            for(int j =0; j < MAX_ENTITY; j++)
+                  gstate.collisionMatrix[i][j] = false;
+      }
+
       for(int i = 0; i < this -> gstate.entityCount;i++){
             this -> gstate.entityType[i] = Entites[i] -> getType();
             for(int j = i+1; j < this -> gstate.entityCount;j++){
@@ -32,6 +39,18 @@ void Jeu::step(int dt){
       this -> script.update(&gstate);
 
       this -> instantiate();
+
+      int nbEntity = this -> gstate.entityCount;
+
+      for(int i = nbEntity - 1; i>=0;i--){
+            if(this -> gstate.deleteList[i]){
+                  std::cout << "vector size : "<< Entites.size() <<  std::endl;
+                  std::cout << "erased entity : "<< i <<  std::endl;
+                  std::cout << "vector size : "<< Entites.size() <<  std::endl;
+                  Entites.erase(Entites.begin() + i);
+                  this -> gstate.entityCount--;
+            }
+      }
 }
 
 void Jeu::instantiate(){

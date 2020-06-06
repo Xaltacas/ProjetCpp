@@ -23,7 +23,7 @@ Mechant.o: Entites/Mechants/Mechant.cpp  Entites/Mechants/Mechant.hpp Entites/En
 	$(CC) -c $< $(WFLAGS)
 
 #Joueurs/
-JoueurPhysique.o: Entites/Joueurs/JoueurPhysique.cpp Entites/Joueurs/JoueurPhysique.hpp Entites/Joueurs/Joueur.hpp Entites/Entite.hpp Entites/Projectiles/Projectile.hpp
+JoueurPhysique.o: Entites/Joueurs/JoueurPhysique.cpp Entites/Joueurs/JoueurPhysique.hpp Entites/Joueurs/Joueur.hpp Entites/Entite.hpp Entites/Projectiles/Projectile.hpp Trajectoires/Trajectoire.hpp
 	$(CC) -c $< $(WFLAGS)
 
 JoueurIA.o: Entites/Joueurs/JoueurIA.cpp Entites/Joueurs/JoueurIA.hpp Entites/Joueurs/Joueur.hpp Entites/Entite.hpp Trajectoires/Trajectoire.hpp Entites/Projectiles/Projectile.hpp

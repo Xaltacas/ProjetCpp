@@ -5,7 +5,6 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 
-#include "Etat.hpp"
 #include "../Entites/Joueurs/JoueurPhysique.hpp"
 #include "../Entites/Joueurs/JoueurIA.hpp"
 #include "../Entites/Mechants/Mechant.hpp"

@@ -2,6 +2,7 @@
 #define JOUEURP_HPP
 
 #include "Joueur.hpp"
+#include "../../Trajectoires/Trajectoire.hpp"
 #include "../../Formes/Rectangle.hpp"
 
 class JoueurPhysique : public Joueur{

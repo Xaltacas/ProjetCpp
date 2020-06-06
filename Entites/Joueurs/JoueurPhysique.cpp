@@ -43,7 +43,7 @@ void JoueurPhysique::update(struct Gamestate *gstate){
       {
             int col[] = {0,0,255};
             this -> lastShot = gstate -> time;
-            this -> instanciateList.push_back(new Projectile(new Rectangle(posx,posy,5,20,col),new Trajectoire(0,-300,0,0,0,0),ENTITE_P_JOUEUR));
+            this -> instanciateList.push_back(new Projectile(new Forme(posx, posy,"Formes/Models/Pr1.txt"),new Trajectoire(0,-300,0,0,0,0),ENTITE_P_JOUEUR));
 
       }
 

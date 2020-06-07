@@ -56,7 +56,9 @@ Script.o: Other/Script.cpp Other/Script.hpp Other/Gamestate.hpp Entites/Entite.h
 
 clean:
 	rm *.o
-
+	rm hacode
+	rm test_main
+	rm test_texture
 
 
 
@@ -73,3 +75,8 @@ test_main: test_main.o Forme.o Brique.o
 
 test_main.o: test_main.cpp Formes/Brique.hpp Formes/Forme.hpp Catch.hpp
 		$(CC) -c $< $(WFLAGS) $(SFMLFLAGS_OBJ)
+
+all:
+	make
+	make test_main
+	make test_texture

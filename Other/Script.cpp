@@ -1,7 +1,7 @@
 #include "Script.hpp"
 
 void Script::update(struct Gamestate *gstate){
-      if(gstate -> time > this -> lastTime + 5){
+      if(gstate -> time > this -> lastTime + this -> eventDelay){
             this -> lastTime = gstate -> time;
             this -> points += gstate -> time * 0.7;
 
@@ -47,6 +47,9 @@ void Script::update(struct Gamestate *gstate){
                   case 11:
                         this->event11();
                         break;
+                  case 12:
+                        this->event12();
+                        break;
 
             }
       }
@@ -56,7 +59,6 @@ void Script::event1(){
       this -> instanciateList.push_back(new Mechant1(200,-100));
       this -> instanciateList.push_back(new Mechant1(200,-200));
       this -> instanciateList.push_back(new Mechant1(200,-300));
-
 }
 
 void Script::event2(){
@@ -115,16 +117,26 @@ void Script::event9(){
       this -> instanciateList.push_back(new Mechant3(100,-100));
       this -> instanciateList.push_back(new Mechant3(300,-100));
       this -> instanciateList.push_back(new Mechant3(500,-100));
-
-
 }
+
 void Script::event10(){
       this -> instanciateList.push_back(new Mechant4(300,-100));
-
 }
+
 void Script::event11(){
       this -> instanciateList.push_back(new Mechant3(100,-250));
       this -> instanciateList.push_back(new Mechant3(300,-50));
       this -> instanciateList.push_back(new Mechant3(500,-250));
       this -> instanciateList.push_back(new Mechant3(300,-450));
+}
+
+void Script::event12(){
+      if(this -> eventDelay > 1){
+            this -> eventDelay--;
+      }
+      else{
+            this -> event8();
+            this -> event7();
+            this -> event10();
+      }
 }

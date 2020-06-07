@@ -36,6 +36,8 @@ Les textures des différentes entités sont particulières, en effet chaque __En
 
 Un main secondaire a été fait pour afficher simplement les texture, compilation avec "make test_texture" et execution ./test_texture
 
+Des tests unitaires ont été réalisés, pour les compiler "make test_main" et execution avec ./test_main
+
 
 ## Organisation au sein du binome:
 

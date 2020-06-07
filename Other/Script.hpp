@@ -19,8 +19,8 @@ public:
       void update(struct Gamestate *gstate);
 
 
-      Script():points(10),lastTime(0){
-            nbEvent = 12;
+      Script():points(10),lastTime(0),eventDelay(5){
+            nbEvent = 13;
             eventCost = new int[nbEvent];
             eventCost[0] = 0;
             eventCost[1] = 10;
@@ -34,12 +34,14 @@ public:
             eventCost[9] = 100;
             eventCost[10] = 110;
             eventCost[11] = 120;
+            eventCost[12] = 200;
       };
 
 
 private:
       double points;    //les points sont une manière de représenter la menace de sorte à ce que la difficultée augment au cours de la partie
       double lastTime;  //dernière fois qu'un event a eu lieu
+      int eventDelay;   //temps entre deux evenements
 
       int nbEvent;      //nb d'evenement différents
       int *eventCost;   //liste du cout des différents evenements
@@ -56,6 +58,7 @@ private:
       void event9();
       void event10();
       void event11();
+      void event12();
 
 
 

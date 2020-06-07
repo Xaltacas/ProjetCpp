@@ -20,7 +20,7 @@ public:
       }
 
 private:
-      double shotCooldown;    //temps en tre deux tirs
+      double shotCooldown;    //temps entre deux tirs
       double lastShot;        //temps du dernier tir
 };
 

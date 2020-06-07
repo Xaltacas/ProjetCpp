@@ -2,7 +2,7 @@
 
 void Projectile::update(struct Gamestate *gstate){
 
-      //mise  jours de la position
+      //mise a jour de la position
       this->traj->update(gstate->dt);
       this->forme->move(this->traj->getX(),this->traj->getY());
 

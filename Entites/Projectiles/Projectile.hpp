@@ -6,7 +6,7 @@
 
 /*
 Classe représentant un projectile
-un projectile est une entité très simple qui ne fait que se déplacer suivant une trajectoir définie
+un projectile est une entité très simple qui ne fait que se déplacer suivant une trajectoire définie
 */
 
 class Projectile: public Entite {

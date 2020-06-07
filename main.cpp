@@ -32,8 +32,7 @@ int main(){
       if (!music.openFromFile("Music/music1.flac"))
             std::cout <<"Impossible to load music"<< std::endl;
       music.play();
-      //music.setVolume(100);
-      //music.setLoop(true);
+
 
 
       Jeu jeu = Jeu();

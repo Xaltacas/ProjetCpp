@@ -16,7 +16,7 @@ void Jeu::step(int dt){
                   gstate.collisionMatrix[i][j] = false;
       }
 
-      //calcul des cllsions entre chaques entités et mise a jours de la liste des types d'entités
+      //calcul des collsions entre chaques entités et mise a jours de la liste des types d'entités
       for(int i = 0; i < this -> gstate.entityCount;i++){
             this -> gstate.entityType[i] = Entites[i] -> getType();
             for(int j = i+1; j < this -> gstate.entityCount;j++){
@@ -91,7 +91,7 @@ void Jeu::instantiate(){
 
 void Jeu::draw(sf::RenderWindow *window){
 
-      //dessine chaque entités
+      //dessine chaques entités
       for(auto &entite : Entites){
             entite->draw(window);
       }

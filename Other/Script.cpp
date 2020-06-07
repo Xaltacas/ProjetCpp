@@ -72,49 +72,59 @@ void Script::event3(){
 }
 
 void Script::event4(){
-      this -> instanciateList.push_back(new Mechant2(-66,-100));
-      this -> instanciateList.push_back(new Mechant2(-99,-150));
-      this -> instanciateList.push_back(new Mechant2(-132,-200));
+      this -> instanciateList.push_back(new Mechant2_1(-66,-100));
+      this -> instanciateList.push_back(new Mechant2_1(-99,-150));
+      this -> instanciateList.push_back(new Mechant2_1(-132,-200));
 
 }
 
 void Script::event5(){
-      this -> instanciateList.push_back(new Mechant2(-66,-100));
-      this -> instanciateList.push_back(new Mechant2(-99,-150));
-      this -> instanciateList.push_back(new Mechant2(-132,-200));
+      this -> instanciateList.push_back(new Mechant2_2(666,-100));
+      this -> instanciateList.push_back(new Mechant2_2(699,-150));
+      this -> instanciateList.push_back(new Mechant2_2(732,-200));
 
 }
 
 void Script::event6(){
-      this -> instanciateList.push_back(new Mechant2(-66,-100));
-      this -> instanciateList.push_back(new Mechant2(-99,-150));
-      this -> instanciateList.push_back(new Mechant2(-132,-200));
+      this -> instanciateList.push_back(new Mechant1(100,-100));
+      this -> instanciateList.push_back(new Mechant1(200,-100));
+      this -> instanciateList.push_back(new Mechant1(300,-100));
+      this -> instanciateList.push_back(new Mechant1(400,-100));
+      this -> instanciateList.push_back(new Mechant1(500,-100));
 }
 
 void Script::event7(){
-      this -> instanciateList.push_back(new Mechant2(-66,-100));
-      this -> instanciateList.push_back(new Mechant2(-99,-150));
-      this -> instanciateList.push_back(new Mechant2(-132,-200));
+      this -> instanciateList.push_back(new Mechant2_1(-66,-100));
+      this -> instanciateList.push_back(new Mechant2_1(-99,-150));
+      this -> instanciateList.push_back(new Mechant2_1(-132,-200));
+      this -> instanciateList.push_back(new Mechant2_1(-132,-100));
+      this -> instanciateList.push_back(new Mechant2_1(-165,-150));
+      this -> instanciateList.push_back(new Mechant2_1(-198,-200));
 }
 
 void Script::event8(){
-      this -> instanciateList.push_back(new Mechant3(100,-100));
-      this -> instanciateList.push_back(new Mechant3(300,-100));
-      this -> instanciateList.push_back(new Mechant3(500,-100));
+      this -> instanciateList.push_back(new Mechant2_2(666,-100));
+      this -> instanciateList.push_back(new Mechant2_2(699,-150));
+      this -> instanciateList.push_back(new Mechant2_2(732,-200));
+      this -> instanciateList.push_back(new Mechant2_2(699,-100));
+      this -> instanciateList.push_back(new Mechant2_2(732,-150));
+      this -> instanciateList.push_back(new Mechant2_2(765,-200));
 }
 
 void Script::event9(){
       this -> instanciateList.push_back(new Mechant3(100,-100));
       this -> instanciateList.push_back(new Mechant3(300,-100));
       this -> instanciateList.push_back(new Mechant3(500,-100));
+
+
 }
 void Script::event10(){
-      this -> instanciateList.push_back(new Mechant3(100,-100));
-      this -> instanciateList.push_back(new Mechant3(300,-100));
-      this -> instanciateList.push_back(new Mechant3(500,-100));
+      this -> instanciateList.push_back(new Mechant4(300,-100));
+
 }
 void Script::event11(){
-      this -> instanciateList.push_back(new Mechant3(100,-100));
-      this -> instanciateList.push_back(new Mechant3(300,-100));
-      this -> instanciateList.push_back(new Mechant3(500,-100));
+      this -> instanciateList.push_back(new Mechant3(100,-250));
+      this -> instanciateList.push_back(new Mechant3(300,-50));
+      this -> instanciateList.push_back(new Mechant3(500,-250));
+      this -> instanciateList.push_back(new Mechant3(300,-450));
 }

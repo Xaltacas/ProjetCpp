@@ -61,12 +61,12 @@ void JoueurClavier::update(struct Gamestate *gstate){
             }
       }
 
-      //tests sur les pv pur savoir quand se supprimer
+      //tests sur les pv pour savoir quand se supprimer
       if(this -> vie <= 0){
             gstate -> deleteList[gstate -> currEntity] = true;
             gstate -> alivePlayer--;
       }
 
-      //indication des pvs au gamestate
+      //indication des pv au gamestate
       gstate -> pvJ1 = this -> vie;
 };

@@ -8,7 +8,7 @@
 
 
 /*
-Classe qui gère les différent  evenement au cours de la partie (vitesse et type d'apparition de mechants)
+Classe qui gère les différents evenements au cours de la partie (vitesse et type d'apparition de mechants)
 */
 class Script{
 public:

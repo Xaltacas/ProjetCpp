@@ -65,3 +65,11 @@ test_texture: test_texture.o Forme.o Brique.o
 
 test_texture.o: test_texture.cpp Formes/Brique.hpp Formes/Forme.hpp
 	$(CC) -c $< $(WFLAGS) $(SFMLFLAGS_OBJ)
+
+
+
+test_main: test_main.o Forme.o Brique.o
+		$(CC) -o $@ test_main.o Forme.o Brique.o $(WFLAGS) $(SFMLFLAGS_LINK)
+
+test_main.o: test_main.cpp Formes/Brique.hpp Formes/Forme.hpp Catch.hpp
+		$(CC) -c $< $(WFLAGS) $(SFMLFLAGS_OBJ)

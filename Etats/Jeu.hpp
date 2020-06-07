@@ -29,13 +29,13 @@ public:
 private:
 
       std::vector<Entite*> Entites;       //listes des entités en jeu
-      std::vector<Entite*> EntitesTemp;   //liste temporaires d'entitées (utilisée lors des updates pour ne pas modifier la boucle que l'on parcours actuellement)
+      std::vector<Entite*> EntitesTemp;   //liste temporaires d'entités (utilisée lors des updates pour ne pas modifier la boucle que l'on parcours actuellement)
 
       Script script;                      //script qui gère les différents evenements du jeu
       struct Gamestate gstate;            //etat instantané du jeu
 
       sf::Font font;          //police pour l'affichage des informations textuelles
-      sf::Text scoreText;     //texte our afficher le score
+      sf::Text scoreText;     //texte pour afficher le score
       sf::Text perdu;         //texte de fin
 
       void instantiate();     //fontions appellée en fin de step pour instancier les nouvelles entités

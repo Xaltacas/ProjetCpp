@@ -12,7 +12,7 @@
 
 /*
 Classe de base pour représenter une entité.
-Chaque entité a une forme qui permet l'affichage et le calcul des collision.
+Chaque entité a une forme qui permet l'affichage et le calcul des collisions.
 Chaque entité est identifiée par un type (joueur,méchant,projectile).
 */
 class Entite{
@@ -28,7 +28,7 @@ public:
             this->forme->draw(window);
       }
 
-      //fonction appellée pour mettre a jour l'entités
+      //fonction appellée pour mettre a jour l'entité
       //gère le déplacement, comportement...
       virtual void update(struct Gamestate *gstate)=0;
 
@@ -43,7 +43,7 @@ public:
             return this ->type;
       }
 
-      //liste d'entité que ceete entité souhait instancier dans le jeu
+      //liste d'entité que cette entité souhaite instancier dans le jeu
       std::vector<Entite*> instanciateList;
 
 

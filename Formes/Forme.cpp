@@ -45,11 +45,8 @@ void Forme::draw(sf::RenderWindow *window){
                   int col[] = {r,g,b};
                   this ->briques[i] = Brique(xb ,yb ,lengthb ,heightb, col);
                   i++;
-                  //std::cout << "je fais la boucle "<< std::endl;
-                  //std::cout << "création brique :: " << xb << " " << yb << " " << lengthb << " " << heightb << " " << r << " " << g << " " << b << std::endl;
-                  //std::cout << i << std::endl;
+
             }
-            // std::cout << "texture chargée "<< std::endl;
       }else{
             std::cout << "erreur chargement texture"<<  modelpath <<std::endl;
       }

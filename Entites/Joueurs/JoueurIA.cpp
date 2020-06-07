@@ -10,7 +10,7 @@ void JoueurIA::update(struct Gamestate *gstate){
       double posx = this->forme->getX();
       double posy = this->forme->getY();
 
-      //detections des collision pour les degats subis
+      //detections des collisions pour les degats subis
       for(int i = 0; i < gstate -> entityCount;i++){
             if(gstate -> collisionMatrix[gstate -> currEntity][i]){
                   if(gstate -> entityType[i] == ENTITE_P_MECHANT){
@@ -21,7 +21,7 @@ void JoueurIA::update(struct Gamestate *gstate){
             }
       }
 
-      //tests sur les pv pur savoir quand se supprimer
+      //test sur les pv pur savoir quand se supprimer
       if(this -> vie <= 0){
             gstate -> deleteList[gstate -> currEntity] = true;
             gstate -> alivePlayer--;

@@ -26,7 +26,7 @@ public:
 private:
       double temps;                 //temps depuis la création de la trajectoire
 
-      double affX, affY;            //Composantes afines de la trajectoire
+      double affX, affY;            //Composantes affines de la trajectoire
 
       //composantes en sinus et cosinus sur chaque axe de la trajectoire
       double ampSinX, ampSinY;

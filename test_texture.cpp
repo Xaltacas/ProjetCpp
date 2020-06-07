@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
@@ -10,14 +11,18 @@ Main utilisé pour tester les textures
 
 int main(){
       sf::RenderWindow window(sf::VideoMode(300,300), "test Texture");
+      sf::RectangleShape rect(sf::Vector2f(300,300));
+      rect.setPosition(0, 0);
+      rect.setFillColor(sf::Color(127,127,127));
 
 
-      Forme j1 = Forme(100,50,"Formes/Models/J1.txt");
-      Forme j2 = Forme(200,50,"Formes/Models/J2.txt");
+      Forme j1 = Forme(50,50,"Formes/Models/J1.txt");
+      Forme j2 = Forme(250,50,"Formes/Models/J2.txt");
 
-      Forme m1 = Forme(70,100,"Formes/Models/M1.txt");
+      Forme m1 = Forme(50,100,"Formes/Models/M1.txt");
       Forme m2 = Forme(150,100,"Formes/Models/M2.txt");
       Forme m3 = Forme(250,100,"Formes/Models/M3.txt");
+      Forme m4 = Forme(150,50,"Formes/Models/M4.txt");
 
 
       Forme pr1 = Forme(70,170,"Formes/Models/Pr1.txt");
@@ -34,7 +39,7 @@ int main(){
       {
 
             window.clear();
-
+            window.draw(rect);
 
             j1.draw(&window);
             j2.draw(&window);
@@ -42,6 +47,7 @@ int main(){
             m1.draw(&window);
             m2.draw(&window);
             m3.draw(&window);
+            m4.draw(&window);
 
             pr1.draw(&window);
             pr2.draw(&window);

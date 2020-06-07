@@ -31,11 +31,6 @@ public:
             this -> type = _type;
       }
 
-
-      ~Entite(){
-            delete forme;
-      }
-
       int getType(){
             return this ->type;
       }

@@ -42,8 +42,8 @@ void Jeu::step(int dt){
       for(int i = nbEntity - 1; i>=0;i--){
             if(this -> gstate.deleteList[i]){
                   //std::cout << "vector size : "<< Entites.size() <<  std::endl;
-                  std::cout << "erased entity : "<< i <<  std::endl;
-                  std::cout << "vector size : "<< Entites.size() <<  std::endl;
+                  //std::cout << "erased entity : "<< i <<  std::endl;
+                  //std::cout << "vector size : "<< Entites.size() <<  std::endl;
                   Entite *temp = Entites[i];
 
                   Entites.erase(Entites.begin() + i);
@@ -89,7 +89,7 @@ void Jeu::draw(sf::RenderWindow *window){
       }
 
 
-      scoreText.setString("score : " +std::to_string(this -> gstate.score));
+      scoreText.setString("score : " +std::to_string(this -> gstate.score) +"\nPV j1 : "+std::to_string(this -> gstate.pvJ1));
       window -> draw(scoreText);
 
       if(this -> gstate.alivePlayer == 0){
@@ -102,7 +102,7 @@ void Jeu::draw(sf::RenderWindow *window){
 
 Jeu::Jeu(){
 
-      Entites.push_back(new JoueurPhysique(new Forme(300,700,"Formes/Models/J1.txt")));
+      Entites.push_back(new JoueurClavier(new Forme(300,700,"Formes/Models/J1.txt")));
       this->gstate.entityCount++;
       this->gstate.alivePlayer++;
 

@@ -46,6 +46,7 @@ struct Gamestate{
       int score;
 
       int alivePlayer;
+      int pvJ1;
 
 };
 

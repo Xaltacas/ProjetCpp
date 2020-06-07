@@ -13,8 +13,10 @@ int main(){
       Forme j1 = Forme(100,50,"Formes/Models/J1.txt");
       Forme j2 = Forme(200,50,"Formes/Models/J2.txt");
 
-      Forme m1 = Forme(100,100,"Formes/Models/M1.txt");
-      Forme m2 = Forme(200,100,"Formes/Models/M2.txt");
+      Forme m1 = Forme(70,100,"Formes/Models/M1.txt");
+      Forme m2 = Forme(150,100,"Formes/Models/M2.txt");
+      Forme m3 = Forme(250,100,"Formes/Models/M3.txt");
+
 
       Forme pr1 = Forme(70,170,"Formes/Models/Pr1.txt");
       Forme pr2 = Forme(150,170,"Formes/Models/Pr2.txt");
@@ -37,6 +39,7 @@ int main(){
 
             m1.draw(&window);
             m2.draw(&window);
+            m3.draw(&window);
 
             pr1.draw(&window);
             pr2.draw(&window);

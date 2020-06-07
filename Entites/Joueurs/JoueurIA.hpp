@@ -10,11 +10,12 @@ public:
 
       JoueurIA(Forme* f):Joueur(f),traj(new Trajectoire(0,0,300,0,1.5,0,0,0,0,0)),shotCooldown(0.5),lastShot(0){};
 
-      /*
+
       ~JoueurIA(){
-            delete(traj);
+            delete traj;
+            delete forme;
       }
-      */
+
 
 private:
       Trajectoire* traj;

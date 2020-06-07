@@ -31,7 +31,7 @@ void Forme::draw(sf::RenderWindow *window){
 
 
  Forme::Forme(double _x, double _y, std::string modelpath) : x(_x), y(_y) {
-      std::cout << modelpath << std::endl;
+      //std::cout << modelpath << std::endl;
       std::ifstream flux(modelpath.c_str());
       //std::cout << "je suis la "<< std::endl;
       if(flux){
@@ -53,9 +53,9 @@ void Forme::draw(sf::RenderWindow *window){
 
             }
 
-            std::cout << "texture chargée "<< std::endl;
+            // std::cout << "texture chargée "<< std::endl;
 
       }else{
-            std::cout << "erreur chargement texture"<< std::endl;
+            std::cout << "erreur chargement texture"<<  modelpath <<std::endl;
       }
 }

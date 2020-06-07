@@ -2,7 +2,7 @@
 #define SCRIPT_HPP
 
 #include "../Entites/Entite.hpp"
-#include "../Entites/Mechants/Mechant.hpp"
+#include "../Entites/Mechants/Mechants.hpp"
 #include "Gamestate.hpp"
 #include <stdlib.h>
 

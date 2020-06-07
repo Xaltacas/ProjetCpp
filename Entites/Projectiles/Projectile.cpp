@@ -11,7 +11,7 @@ void Projectile::update(struct Gamestate *gstate){
 
       if( posx < -100 || posx > gstate -> sizeX +100 || posy < -100 || posy > gstate -> sizeY +100){
             gstate -> deleteList[gstate -> currEntity] = true;
-            std::cout << "Projectile OOB : "<< gstate -> currEntity <<  std::endl;
+            //std::cout << "Projectile OOB : "<< gstate -> currEntity <<  std::endl;
       }
 
 

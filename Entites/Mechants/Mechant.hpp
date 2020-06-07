@@ -8,17 +8,11 @@
 
 class Mechant: public Entite{
 public:
-      void update(struct Gamestate *gstate);
 
-      Mechant(Forme* f,Trajectoire* t):Entite(f,ENTITE_MECHANT),traj(t),vie(10),shotCooldown(2),lastShot(0){};
+      Mechant(Forme* f, Trajectoire* t, int _vie, double shotCD):Entite(f,ENTITE_MECHANT),traj(t),vie(_vie),shotCooldown(shotCD),lastShot(0){};
 
-      /*
-      ~Mechant(){
-            delete(traj);
-      }
-      */
 
-private:
+protected:
       Trajectoire* traj;
       int vie;
 

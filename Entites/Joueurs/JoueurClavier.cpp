@@ -1,6 +1,6 @@
-#include "JoueurPhysique.hpp"
+#include "JoueurClavier.hpp"
 
-void JoueurPhysique::update(struct Gamestate *gstate){
+void JoueurClavier::update(struct Gamestate *gstate){
 
       double posx = this->forme->getX();
       double posy = this->forme->getY();
@@ -41,7 +41,6 @@ void JoueurPhysique::update(struct Gamestate *gstate){
 
       if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && (gstate -> time - this -> lastShot > this -> shotCooldown))
       {
-            int col[] = {0,0,255};
             this -> lastShot = gstate -> time;
             this -> instanciateList.push_back(new Projectile(new Forme(posx+10, posy,"Formes/Models/Pr1.txt"),new Trajectoire(0,-1000,0,0,0,0,0,0,0,0),ENTITE_P_JOUEUR));
             this -> instanciateList.push_back(new Projectile(new Forme(posx-10, posy,"Formes/Models/Pr1.txt"),new Trajectoire(0,-1000,0,0,0,0,0,0,0,0),ENTITE_P_JOUEUR));
@@ -65,4 +64,6 @@ void JoueurPhysique::update(struct Gamestate *gstate){
             gstate -> deleteList[gstate -> currEntity] = true;
             gstate -> alivePlayer--;
       }
+
+      gstate -> pvJ1 = this -> vie;
 };

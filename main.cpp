@@ -1,6 +1,7 @@
 #include <iostream>
 #include <chrono>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 #include "Etats/Jeu.hpp"
 //#include "Formes/Forme.hpp"
@@ -27,7 +28,12 @@ int main(){
       unsigned int dt;
 
       Jeu jeu = Jeu();
-
+      sf::Music music;
+      if (!music.openFromFile("Music/music1.flac"))
+            std::cout <<"Impossible to load music"<< std::endl;
+      music.play();
+      //music.setVolume(100);
+      //music.setLoop(true);
 
       while (window.isOpen())
       {

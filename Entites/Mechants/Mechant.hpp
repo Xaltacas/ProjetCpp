@@ -10,7 +10,7 @@ class Mechant: public Entite{
 public:
       void update(struct Gamestate *gstate);
 
-      Mechant(Forme* f,Trajectoire* t):Entite(f,ENTITE_MECHANT),traj(t),vie(3),shotCooldown(2),lastShot(0){};
+      Mechant(Forme* f,Trajectoire* t):Entite(f,ENTITE_MECHANT),traj(t),vie(10),shotCooldown(2),lastShot(0){};
 
       /*
       ~Mechant(){

@@ -9,7 +9,7 @@ class JoueurPhysique : public Joueur{
 public:
       void update(struct Gamestate *gstate);
 
-      JoueurPhysique(Forme* f):Joueur(f), shotCooldown(0.4),lastShot(0){};
+      JoueurPhysique(Forme* f):Joueur(f), shotCooldown(0.1),lastShot(0){};
 
 private:
       double shotCooldown;

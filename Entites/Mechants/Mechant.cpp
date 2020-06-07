@@ -9,7 +9,7 @@ void Mechant::update(struct Gamestate *gstate){
       double posx = this->forme->getX();
       double posy = this->forme->getY();
 
-      if( posx < -100 || posx > gstate -> sizeX +100 || posy < -100 || posy > gstate -> sizeY +100){
+      if( posx < -500 || posx > gstate -> sizeX +500 || posy < -500 || posy > gstate -> sizeY +500){
             gstate -> deleteList[gstate -> currEntity] = true;
             std::cout << "Mechant OOB : "<< gstate -> currEntity <<  std::endl;
       }
@@ -34,7 +34,7 @@ void Mechant::update(struct Gamestate *gstate){
       if (gstate -> time - this -> lastShot > this -> shotCooldown)
       {
             this -> lastShot = gstate -> time;
-            this -> instanciateList.push_back(new Projectile(new Forme(posx, posy,"Formes/Models/Pr6.txt"),new Trajectoire(0,300,0,0,0,0),ENTITE_P_MECHANT));
+            this -> instanciateList.push_back(new Projectile(new Forme(posx, posy,"Formes/Models/Pr6.txt"),new Trajectoire(0,300,0,0,0,0,0,0,0,0),ENTITE_P_MECHANT));
 
       }
 

@@ -27,7 +27,9 @@ void JoueurIA::update(struct Gamestate *gstate){
       if (gstate -> time - this -> lastShot > this -> shotCooldown)
       {
             this -> lastShot = gstate -> time;
-            this -> instanciateList.push_back(new Projectile(new Forme(posx, posy,"Formes/Models/Pr5.txt"),new Trajectoire(0,-300,0,0,0,0),ENTITE_P_JOUEUR));
+            this -> instanciateList.push_back(new Projectile(new Forme(posx-10, posy,"Formes/Models/Pr5.txt"),new Trajectoire(0,-300,0,0,0,0,0,0,0,0),ENTITE_P_JOUEUR));
+            this -> instanciateList.push_back(new Projectile(new Forme(posx+10, posy,"Formes/Models/Pr5.txt"),new Trajectoire(0,-300,0,0,0,0,0,0,0,0),ENTITE_P_JOUEUR));
+            this -> instanciateList.push_back(new Projectile(new Forme(posx, posy-10,"Formes/Models/Pr5.txt"),new Trajectoire(0,-300,0,0,0,0,0,0,0,0),ENTITE_P_JOUEUR));
 
       }
 

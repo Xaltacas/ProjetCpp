@@ -21,15 +21,14 @@ public:
             eventCost[2] = 20;
             eventCost[3] = 20;
             eventCost[4] = 30;
-            eventCost[5] = 40;
-            eventCost[6] = 40;
+            eventCost[5] = 30;
+            eventCost[6] = 30;
             eventCost[7] = 50;
             eventCost[8] = 70;
             eventCost[9] = 100;
-            eventCost[10] = 5;
-            eventCost[11] = 5;
-            eventCost[12] = 10;
-            eventCost[13] = 10;
+            eventCost[10] = 110;
+            eventCost[11] = 120;
+
 
       };
 
@@ -52,8 +51,7 @@ private:
       void event9();
       void event10();
       void event11();
-      void event12();
-      void event13();
+
 
 
 };

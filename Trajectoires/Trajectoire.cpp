@@ -14,6 +14,9 @@ void Trajectoire::update(int dt){
       moveX += ft* this->ampSinX * sin(this->freqSinX * this -> temps);
       moveY += ft* this->ampSinY * sin(this->freqSinY * this -> temps);
 
+      moveX += ft* this->ampCosX * cos(this->freqCosX * this -> temps);
+      moveY += ft* this->ampCosY * cos(this->freqCosY * this -> temps);
+
       this -> nextX = moveX;
       this -> nextY = moveY;
 

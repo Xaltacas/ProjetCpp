@@ -1,5 +1,5 @@
 CC = g++
-WFLAGS = -Wall
+WFLAGS = -Wall -g
 #SFMLFLAGS_LINK = -L/nfs/home/sasl/eleves/rob/3800630/lib/SFML-2.5.1/lib/ -lsfml-graphics -lsfml-window -lsfml-system
 SFMLFLAGS_LINK = -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 #SFMLFLAGS_OBJ = -I/nfs/home/sasl/eleves/rob/3800630/lib/SFML-2.5.1/include/

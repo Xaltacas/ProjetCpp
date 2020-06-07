@@ -3,6 +3,8 @@
 #include "Forme.hpp"
 #include "Brique.hpp"
 
+
+//classe derivant de forme, permettant de créer une approximation de cercle sans passer par un fichier de texture
 class Cercle : public Forme {
 public:
       Cercle(double _x, double _y, double _radius, int* _color): Forme(_x,_y,3) {

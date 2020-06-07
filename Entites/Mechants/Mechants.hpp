@@ -3,7 +3,10 @@
 
 #include "Mechant.hpp"
 
-
+/*
+Trois classe concrètes représentant des méchant
+Chaque classe a sa propre texture, trajectoire et logique
+*/
 class Mechant1: public Mechant{
 public:
       void update(struct Gamestate *gstate);

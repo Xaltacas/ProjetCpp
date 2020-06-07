@@ -18,13 +18,11 @@ bool Forme::intersect(Forme f){
                   }
             }
       }
-
       return false;
 }
 
 void Forme::draw(sf::RenderWindow *window){
       for(int i = 0; i < nbBriques; i++){
-
             briques[i].draw(this->x,this->y,window);
       }
 }
@@ -50,11 +48,8 @@ void Forme::draw(sf::RenderWindow *window){
                   //std::cout << "je fais la boucle "<< std::endl;
                   //std::cout << "création brique :: " << xb << " " << yb << " " << lengthb << " " << heightb << " " << r << " " << g << " " << b << std::endl;
                   //std::cout << i << std::endl;
-
             }
-
             // std::cout << "texture chargée "<< std::endl;
-
       }else{
             std::cout << "erreur chargement texture"<<  modelpath <<std::endl;
       }

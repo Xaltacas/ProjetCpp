@@ -1,5 +1,15 @@
 #include "Mechants.hpp"
 
+/*
+Implémentation de la logique des trois type de méchants
+Toujours le meme schéma:
+- mise a jours de la position,
+- suppression si la position sort trop du cardre
+- tests des collsions pour les degats subit
+- test sur les pv pour savoir quand disparaitre
+- tir des projetiles si possible
+*/
+
 void Mechant1::update(struct Gamestate *gstate){
 
       this->traj->update(gstate->dt);

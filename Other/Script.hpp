@@ -6,12 +6,18 @@
 #include "Gamestate.hpp"
 #include <stdlib.h>
 
-class Script{
 
+/*
+Classe qui gère les différent  evenement au cours de la partie (vitesse et type d'apparition de mechants)
+*/
+class Script{
 public:
+      //liste des unités à instancier
       std::vector<Entite*> instanciateList;
 
+      //fonction appellée à chaque cycle
       void update(struct Gamestate *gstate);
+
 
       Script():points(10),lastTime(0){
             nbEvent = 12;
@@ -28,18 +34,17 @@ public:
             eventCost[9] = 100;
             eventCost[10] = 110;
             eventCost[11] = 120;
-
-
       };
 
 
 private:
-      double points;
-      double lastTime;
+      double points;    //les points sont une manière de représenter la menace de sorte à ce que la difficultée augment au cours de la partie
+      double lastTime;  //dernière fois qu'un event a eu lieu
 
-      int nbEvent;
-      int *eventCost;
+      int nbEvent;      //nb d'evenement différents
+      int *eventCost;   //liste du cout des différents evenements
 
+      //différents evenements
       void event1();
       void event2();
       void event3();

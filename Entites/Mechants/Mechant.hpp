@@ -5,7 +5,9 @@
 #include "../Entite.hpp"
 #include "../Projectiles/Projectile.hpp"
 
-
+/*
+Classe abstraite représantant un méchant
+*/
 class Mechant: public Entite{
 public:
 
@@ -13,11 +15,11 @@ public:
 
 
 protected:
-      Trajectoire* traj;
-      int vie;
+      Trajectoire* traj;      //trajectoire que suit le méchant
+      int vie;                //points de vie
 
-      double shotCooldown;
-      double lastShot;
+      double shotCooldown;    //delai entre deux tirs
+      double lastShot;        //temps du denrier tir
 };
 
 #endif

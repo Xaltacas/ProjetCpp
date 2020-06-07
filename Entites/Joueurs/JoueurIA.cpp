@@ -2,6 +2,7 @@
 
 void JoueurIA::update(struct Gamestate *gstate){
 
+      //mise a jour de la position
       this->traj->update(gstate->dt);
 
       this->forme->move(this->traj->getX(),this->traj->getY());
@@ -9,6 +10,7 @@ void JoueurIA::update(struct Gamestate *gstate){
       double posx = this->forme->getX();
       double posy = this->forme->getY();
 
+      //detections des collision pour les degats subis
       for(int i = 0; i < gstate -> entityCount;i++){
             if(gstate -> collisionMatrix[gstate -> currEntity][i]){
                   if(gstate -> entityType[i] == ENTITE_P_MECHANT){
@@ -19,11 +21,13 @@ void JoueurIA::update(struct Gamestate *gstate){
             }
       }
 
+      //tests sur les pv pur savoir quand se supprimer
       if(this -> vie <= 0){
             gstate -> deleteList[gstate -> currEntity] = true;
             gstate -> alivePlayer--;
       }
 
+      //tirs automatiques
       if (gstate -> time - this -> lastShot > this -> shotCooldown)
       {
             this -> lastShot = gstate -> time;

@@ -4,6 +4,11 @@
 
 #include "../../Trajectoires/Trajectoire.hpp"
 
+
+/*
+Classe représentant un joueur IA
+Dans ce cas l'ia est une simple trajectoire de gauche à droite
+*/
 class JoueurIA : public Joueur{
 public:
       void update(struct Gamestate *gstate);
@@ -18,10 +23,10 @@ public:
 
 
 private:
-      Trajectoire* traj;
+      Trajectoire* traj;      //Trajectoire que suit l'IA
 
-      double shotCooldown;
-      double lastShot;
+      double shotCooldown;    //delai entre deux tirs
+      double lastShot;        //temps du dernier tir
 
 
 };

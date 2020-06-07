@@ -4,9 +4,11 @@
 #include "Formes/Forme.hpp"
 
 
-int main(){
+/*
+Main utilisé pour tester les textures
+*/
 
-      std::cout << "ca complie!! incroyable!!"<< std::endl;
+int main(){
       sf::RenderWindow window(sf::VideoMode(300,300), "test Texture");
 
 
